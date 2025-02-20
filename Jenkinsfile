@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('NPM Install'){
             steps{
-                bat 'nom install'
+                bat 'npm install'
             }
         }
         stage('Run intergartion test'){
