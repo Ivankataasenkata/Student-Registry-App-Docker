@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Print Hello Message'){
             steps{
-                bat 'Hello Jenkins'
+                echo 'Hello World'
             }
         }
     }
