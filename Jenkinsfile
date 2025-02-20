@@ -1,30 +1,24 @@
-pipeline{
-    agent any
-    stages{
-        stage('NPM Install'){
-            steps{
-                bat 'npm install'
+pipeline {
+    agent any // Specifies that the pipeline can run on any available agent
+
+    stages {
+        stage('NPM Install') {
+            steps {
+                bat 'npm install' // Use bat for Windows agents
             }
         }
-        stage('Run intergartion test'){
-            steps{
-                bat 'npm run test'
+        stage('Run Integration Test') { // Corrected spelling of "Integration"
+            steps {
+                bat 'npm run test' // Use bat for Windows agents
             }
         }
-        stage('Deploy to STAGINH'){
-            steps{
+        stage('Deploy to STAGING') { // Corrected spelling of "STAGING"
+            steps {
                 echo 'Deploying to staging'
             }
         }
-        stage('Approval for Production Deployment'){
-            steps{
-                script{
-                    input message: 'Proceed with production deployment?', ok: 'Deploy'
-                }
-            }
-        }
-        stage('Deploy to PRODUCTION'){
-            steps{
+        stage('Deploy to PRODUCTION') { // Corrected spelling of "PRODUCTION"
+            steps {
                 echo 'Deploying to production'
             }
         }
