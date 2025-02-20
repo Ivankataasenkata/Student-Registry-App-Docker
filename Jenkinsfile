@@ -1,8 +1,9 @@
 pipeline{
     agent: any
     stages{
-        stage('Build'){
+        stage('Print Hello Message'){
             steps{
+                bat 'Hello Jenkins'
             }
         }
     }
